@@ -1,0 +1,29 @@
+{
+  "name": "db-mysql-consult-api",
+  "version": "1.0.0",
+  "description": "Rest Apo for consulting to mySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fvg1999/db-mysql-consult-api.git"
+  },
+  "keywords": [
+    "\"rest\"",
+    "\"api\"",
+    "\"server\"",
+    "\"Node.js\""
+  ],
+  "author": "Frank Vegas",
+  "license": "GNU General Public License v3.0",
+  "bugs": {
+    "url": "https://github.com/fvg1999/db-mysql-consult-api/issues"
+  },
+  "homepage": "https://github.com/fvg1999/db-mysql-consult-api#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}
