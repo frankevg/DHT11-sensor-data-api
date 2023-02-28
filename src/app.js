@@ -1,7 +1,11 @@
+const { json } = require('express');
 const express = require('express');
 const mysql = require('mysql');
 
 const app = express();
+
+//Settings
+app.set('json spaces', 2);
 
 // Set up MySQL connection
 const connection = mysql.createConnection({
@@ -49,6 +53,12 @@ app.get('/api/data', (req, res) => {
   }
 });
 
+
+//routes
+app.get('/', (req, res) => {
+  res.json({ "Tittle": "Hellow World" });
+  
+});
 // Start your server
 app.listen(3000, () => {
   console.log('Server started on port 3000!');
