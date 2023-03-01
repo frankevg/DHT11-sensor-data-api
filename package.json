@@ -4,6 +4,7 @@
   "description": "Rest Apo for consulting to mySQL",
   "main": "index.js",
   "scripts": {
+    "dev":"nodemon db-mysql-consult-api/src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,5 +26,8 @@
   "dependencies": {
     "express": "^4.18.2",
     "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
