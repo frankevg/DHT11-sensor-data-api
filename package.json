@@ -1,15 +1,15 @@
 {
-  "name": "db-mysql-consult-api",
+  "name": "dht11-sensor-data-api",
   "version": "1.0.0",
-  "description": "Rest Apo for consulting to mySQL",
-  "main": "index.js",
+  "description": "Rest api for the DHT11 sensor conected to mysql",
+  "main": "src/index.js",
   "scripts": {
-    "dev":"nodemon db-mysql-consult-api/src/app.js",
+    "dev": "nodemon DHT11-sensor-data-api/src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fvg1999/db-mysql-consult-api.git"
+    "url": "git+https://github.com/fvg1999/DHT11-sensor-data-api.git"
   },
   "keywords": [
     "\"rest\"",
@@ -20,11 +20,12 @@
   "author": "Frank Vegas",
   "license": "GNU General Public License v3.0",
   "bugs": {
-    "url": "https://github.com/fvg1999/db-mysql-consult-api/issues"
+    "url": "https://github.com/fvg1999/DHT11-sensor-data-api/issues"
   },
-  "homepage": "https://github.com/fvg1999/db-mysql-consult-api#readme",
+  "homepage": "https://github.com/fvg1999/DHT11-sensor-data-api#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "morgan": "^1.10.0",
     "mysql": "^2.18.1"
   },
   "devDependencies": {
