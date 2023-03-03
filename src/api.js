@@ -27,7 +27,7 @@ class Api {
 
       if (latestOnly) {
         // Make a query to your MySQL database to get the latest entry
-        const results = await this.db.query('SELECT * FROM th ORDER BY timestamp_field DESC LIMIT 1');
+        const results = await this.db.query('SELECT * FROM th ORDER BY fecha DESC LIMIT 1');
         res.send(results[0]); // Send the latest entry as a response to the API request (assuming the query returns only one row)
       } else {
         // Make a query to your MySQL database to get all data
