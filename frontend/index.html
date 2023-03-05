@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Real-time DHT11 Graph</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+ 
+  <div id="chart"></div>
+  <script>
+    var chartData = [{
+      x: [],
+      y: [[], []],
+      type: 'scatter'
+    }];
+    var chartData = [  {    x: [],
+    y: [],
+    type: 'scatter',
+    name: 'Temperature'
+  },
+
+  {
+    x: [],
+    y: [],
+    type: 'scatter',
+    name: 'Humidity'
+  }
+];
+var layout = {
+  title: 'Real-time DHT11 Graph',
+  xaxis: {
+    title: 'Time',
+    showgrid: true,
+    zeroline: true
+  },
+  yaxis: {
+    title: 'Temperature',
+    showline: true
+  },
+  yaxis2: {
+    title: 'Humidity',
+    showline: true,
+    overlaying: 'y',
+    side: 'right'
+  }
+};
+    Plotly.newPlot('chart', chartData, layout);
+    function getLatestData() {
+  $.get("http://192.168.18.145:3000/api/data?latestOnly=true", function(data) {
+    var sensorData = JSON.parse(data);
+    
+    chartData[0].x.push(sensorData.fecha);
+    chartData[0].y.push(sensorData.temperatura);
+    
+    chartData[1].x.push(sensorData.fecha);
+    chartData[1].y.push(sensorData.humedad);
+    
+    Plotly.update('chart', chartData, layout);
+  });
+}
+    setInterval(getLatestData, 5000);
+  </script>
+</body>
+</html>
