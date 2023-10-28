@@ -13,7 +13,7 @@ Prerequisites
   * Database name
   
 # Installing
-  * Clone the repository: git clone https://github.com/fvg1999/DHT11-sensor-data-api.git
+  * Clone the repository: git clone https://github.com/frankevg/Temperature-and-Humidity-Data-Logger
   * Install the dependencies:
     * cd DHT11-sensor-data-api
     * npm install
